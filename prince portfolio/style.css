@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+  font-family: myfont;
+  src: url(fonts/abnes.ttf);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: black;
+  }
+  
+  header {
+    position: relative;
+    width: 100vw;
+     /* Full viewport width */
+    height: 100vh;
+     /* Full viewport height */
+    overflow: hidden; /* Crop overflow content */
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center; 
+  }
+  
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%); /* Center the video */
+    /* object-fit: cover; */
+     /* Cover the container, cropping sides */
+    filter: hue-rotate(180deg) brightness(0.17);
+  }
+  nav {
+    z-index: 10;
+    position: fixed;
+    top: -20px;
+    height: 150px;
+    width: 100%;
+    background: linear-gradient(to bottom, black, #000000ad, #00000000);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5%;
+    box-sizing: border-box;
+
+    animation-name: floater;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+  nav .left {
+    height:60px;
+    border-radius: 19px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    background-color: #ff8b8bb4;
+    color:#fffab9;
+
+    
+
+
+    transition-duration: 1s;
+    transition-property: background-color, color, transform;
+    transition-timing-function: ease-in-out;
+  }
+  nav .left p {
+    padding: 15px 15px;
+    font-size: 30px;
+    font-family: myfont;
+    font-weight: 900;
+    transition-duration: 0.9s;
+    transition-property:transform;
+    transition-timing-function: linear;
+    cursor:default;
+  }
+  nav .left:hover {
+    background-color: #ff8b8b;
+    color: #fffab9;
+    transform: rotate(360deg);
+  }
+  nav .left p:hover {
+    transform: rotate(-360deg);
+    color: #fffab9;
+  }
+  .right ul {
+    list-style: none;
+    color: #555555;
+    font-family: sans-serif;
+    font-weight: 900;
+  }
+  .right ul :nth-child(1) {
+    transition-duration: 0.5s;
+    transition-property: transform, color;
+    transition-timing-function: ease-in-out;
+  }
+  .right ul :nth-child(2) {
+    transition-duration: 0.5s;
+    transition-property: transform, color;
+    transition-timing-function: ease-in-out;
+  }
+
+  .right ul :nth-child(1):hover {
+    text-shadow: 0px 0px 1px #fffab9;
+    transform: translateX(-30px);
+    color: #ff8b8b;
+  }
+  .right ul :nth-child(2):hover {
+    text-shadow: 0px 0px 1px #fffab9;
+    transform: translateX(-30px);
+    color: #ff8b8b;
+  }
+  .right ul li a {
+    color: #855e5e;
+    text-decoration: none;
+  }
+  .s1 {
+    cursor: default;
+    /* max-width: 100%; */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* background-color: white; */
+    margin-top: 200px;
+    text-align: center;
+    gap: 10px 10px;
+    flex-wrap: wrap;
+
+    animation-name: floater;
+    animation-duration:2s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+  .s1 p {
+    color: red;
+    /* font-size: 30px; */
+    font-family: myfont;
+    /* font-family: "Dela Gothic One", sans-serif; */
+    line-height: 0px;
+  }
+  .s1 :nth-child(1) {
+    margin-bottom: 70px;
+    font-size: 25px;
+    color: #fffab9;
+    transition-duration: 0.3s;
+    transition-property: font-size, text-shadow, transform;
+    transition-timing-function: ease;
+
+    
+  }
+  .s1 :nth-child(2) {
+    color: #ff8b8b;
+    font-size: 50px;
+    transition-duration: 0.3s;
+    transition-property: font-size, text-shadow, transform;
+    transition-timing-function: ease;
+  }
+  .s1 :nth-child(3) {
+    color: #fffab9;
+    transition-duration: 0.3s;
+    transition-property: font-size, text-shadow, transform;
+    transition-timing-function: ease;
+  }
+  .s1 :nth-child(4) {
+    color: #ff8b8b;
+    font-size: 50px;
+    transition-duration: 0.3s;
+    transition-property: font-size, text-shadow, transform;
+    transition-timing-function: ease;
+  }
+  .s1 :nth-child(4) .b1 {
+    color: #fffab9;
+    font-size: 30px;
+
+  }
+
+  .s1 :nth-child(1):hover {
+    font-size: 27px;
+    text-shadow: 0px 0px 20px #fffab9;
+    transform: skew(10deg, -1.2deg);
+  } 
+  .s1 :nth-child(2):hover {
+    font-size: 60px;
+    text-shadow: 0px 0px 20px #ff8b8b;
+    transform: skew(10deg, -1.2deg);
+  } 
+  .s1 :nth-child(3):hover {
+    font-size: 17px;
+    text-shadow: 0px 0px 20px #fffab9;
+    transform: skew(10deg, -1.2deg);
+  } 
+  .s1 :nth-child(4):hover {
+    font-size: 60px;
+    transform: skew(-10deg, 1.2deg);
+    text-shadow: 0px 0px 20px #ff8b8b;
+  }
+  .arrow {
+    margin-top: 120px;
+    color: #fffab9;
+  }
+ 
+  .pic-box {
+    height: 100px;
+    width: 100px;
+    /* background-color: white; */
+    position: absolute;
+    z-index: 2;
+    bottom: 0px;
+    left: 0%;
+  }
+  .me {
+    display: flex;
+    align-items: end;
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(to bottom, #ff8b8b, black);
+    border-top-right-radius: 80px;
+    color: white;
+  }
+  .pic-box img {
+    height: 100px;
+    filter:brightness(0) opacity(0.9);
+    transition-duration: 0.7s;
+    transition-property:transform, transform-origin, filter, height;
+    transition-timing-function: cubic-bezier(0, 1.18, 0.83, 1.02);
+  }
+  .pic-box img:hover {
+    transform:scale(2);
+    transform-origin: bottom left;
+    filter: drop-shadow(0px 0px 2px #ff4545) contrast(2) sepia(10) hue-rotate(320deg) brightness(0.9);
+   
+  }
+   .seperation {
+    position: relative;
+    top: -100px;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.507), black);
+  }
+
+
+
+
+  .main {
+    height: 400px;
+  }
+
+
+
+
+
+
+
+
+
+  @keyframes floater {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(20px);
+    }
+  }
+
+
+  @media screen and (max-width: 1040px) {
+    .s1 :nth-child(1) {
+      font-size: 10px;
+    }
+    .s1 :nth-child(2) {
+      font-size: 15px;
+    }
+    .s1 :nth-child(3) {
+      font-size: 10px;
+    }
+    .s1 :nth-child(4) {
+      font-size: 15px;
+    }
+    .s1 :nth-child(4) .b1 {
+      font-size: 10px;
+    }
+
+    .s1 :nth-child(1):hover {
+      font-size: 11px;
+    } 
+    .s1 :nth-child(2):hover {
+      font-size: 16px;
+      transform: skew(-10deg, 1.2deg);
+    } 
+    .s1 :nth-child(3):hover {
+      font-size: 11px;
+    } 
+    .s1 :nth-child(4):hover {
+      font-size: 16px;;
+    } 
+  }
